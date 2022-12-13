@@ -11,6 +11,7 @@ const App = () => {
       .then((r) => {
         const synonymList = r.data.response[0].list.synonyms.split('|');
         setSynonyms(synonymList[Math.floor(Math.random() * synonymList.length)]);
+        console.log(synonymList);
       })
       .catch((e) => {
         setSynonyms(e.message);
